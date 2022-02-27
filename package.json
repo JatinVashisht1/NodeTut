@@ -11,6 +11,7 @@
     "url": "first node project"
   },
   "author": "Jatin",
+  "type": "module",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3",
