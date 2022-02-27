@@ -1,5 +1,3 @@
-console.log('Hello world');
-
 // Single thread can manage multiple connections very efficiently
 // It gets possible because of non-blocking IO model
 // Non-Blocking IO Model: It works on the principle that if one process is taking time to get complete, it will
@@ -7,3 +5,9 @@ console.log('Hello world');
 // This helps in handling more than one connections simultaneously in single thread only.
 
 // npm: node package manager, it manages packages of node project (similar to pip in python)
+
+const vashisht = require("./second") // this is syntax to import files in node js
+
+console.log('Hello world', vashisht);
+
+// module wraper function
