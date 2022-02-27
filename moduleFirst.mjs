@@ -22,3 +22,8 @@ import Simple34 from "./moduleSecond.mjs"
 // below statment will give error
 // import {Simple1, Simple34} from "./moduleSecond.mjs"
 Simple34()
+
+// * is used to import everything export-able from the other module
+// this concept is also similar to python
+import * as a2 from "./moduleSecond.mjs"
+console.log(a2)
