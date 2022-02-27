@@ -12,4 +12,4 @@ export default function Simple2(){
 // below statement is also giving error after changing extension of this file to .mjs
 // so we have to use do it as described by es6 guidlines
 // ES6 is the *RECOMMENDED* way to do import and export
-module.exports =  Simple;
+// module.exports =  Simple;
