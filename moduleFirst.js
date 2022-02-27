@@ -3,6 +3,10 @@
 // we cannot import content of different modules by using require if it uses .mjs extension, 
 // let us change the name of module second for more clearance
 // below statement is giving error when we renamed the moduleSecond.js to moduleSecond.mjs
-const Simple = require("./moduleSecond")
+// const Simple = require("./moduleSecond")
 
+// ES6 is the *RECOMMENDED* way to do import and export
+
+
+import Simple from "./moduleSecond.mjs"
 Simple()
