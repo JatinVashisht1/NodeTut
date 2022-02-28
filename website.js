@@ -1,4 +1,5 @@
 import http from 'http';
+import fs from 'fs';
 
 // we can specify the port on which we want to listen our application
 // this port has to be defined our environment variable
@@ -9,9 +10,14 @@ const server = http.createServer((req, res)=>{
     // this statement will be printed eachtime we will hit our server
     console.log(req.url)
     res.setHeader('Content-Type', 'text/html')
-    if(req.url == '/'){
-        res.statusCode = 200;
-        res.end('<h1> This is CodeWithHarry</h1> <p> This is sample response </p>');
+
+    // routing by if else statments makes our code more prone to bugs
+    // and it also makes it unreadable
+    // so to handle routing we should use express js
+    if (req.url == '/'){
+        req.statusCode = 200
+        const data = fs.readFileSync('index.html');
+        res.end(data.toString())
     }else if(req.url == '/about'){
         res.statusCode = 200
         res.end('<h1> This is about page</h1> <p> This is sample response for about page</p>');
